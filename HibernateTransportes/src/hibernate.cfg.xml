@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost/transportessys</property>
+    <property name="connection.username">transportessys</property>
+    <property name="connection.password">transportessys</property>
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <property name="hibernate.show_sql">true</property><!--Muestra las sentencias sql en el log-->
+    <!--<property name="hibernate.format_sql">true</property>  Le da formato al query-->  
+    
+    <!-- Mapeo de los archivos XML-->
+    <!-- <mapping resource="com.anncode.transporteshibernate/Camion.hbm.xml"/>Mapeando con los xml-->
+    <!--Mapeando con las anotaciones--> 
+    <mapping class="com.anncode.transporteshibernate.camion.Camion"/>
+    <mapping class="com.anncode.transporteshibernate.camionero.Camionero"/>
+    <mapping class="com.anncode.transporteshibernate.paquete.Paquete"/>
+    <mapping class="com.anncode.transporteshibernate.provincia.Provincia"/>
+    <!-- <mapping resource="com.anncode.transporteshibernate/Camionero.hbm.xml"/>  -->
+    </session-factory>
+</hibernate-configuration>
